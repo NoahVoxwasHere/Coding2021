@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Flexbox</title>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Akronim&family=Roboto:ital,wght@0,100;0,400;1,700&display=swap" rel="stylesheet">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	
+	<style>
+				
+		body{
+			font-family: 'Roboto', sans-serif;
+			margin: 0px;
+		}
+		header{
+			background-color: #202020;
+			background-image:url("images/moon.jpg");
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: center;
+			
+			color:orange;
+			height:50vh;
+			/*this is a flexbox element*/
+			display: flex;
+			/*put this in the center of the container*/
+			align-items: center;
+			padding-left: 20px;
+/*			justify-content: center;*/
+		}
+		
+		header h1{
+			font-size: 50px;
+			font-family: 'Akronim', cursive;			
+		}
+		
+		.flex-container{
+			display: flex;
+		}
+		
+		.flex-container div{
+			background-color: #E88551;
+			margin:10px;
+			padding:10px;
+		}
+		/*set the widths of the divs*/
+		
+		#item1{
+			flex:25%;
+		}
+		#item1 img{width:100%;}
+		
+		#item2{
+			flex:50%;
+		}
+		
+		#item3{
+			flex:25%;
+		}
+		.btn{
+			background-color:#A8472B;
+			border:none;
+			padding:15px 32px;
+			font-size: 16px;
+			width:100%;
+		}
+		.btn:hover{
+			background-colour:#9C3315;
+				color:white;
+		}
+		
+		#item4{
+			flex:50%;
+		}
+		#item5{
+			flex:50%;
+		}
+		
+		#item6{ flex:25%;
+		background-color: transparent;
+		}
+		
+		#item7{flex:25%;
+		background-color: transparent;
+			color:aliceblue;
+			text-align:center;
+			font-weight:bold;
+		}
+		
+		#item8{flex:25%;
+		background-color:transparent;}
+		
+		<br>
+		
+		#item13{flex:none;}
+		#item9{flex:50%;}
+		background-color:#D05E44;}
+		
+		#item10{flex:50%;
+		background-color:#D05E44;}
+		
+		#item11{flex:50%;
+		background-color:#D05E44;}
+		.btn{
+			background-color:#A8472B;
+			border:none;
+			padding:15px 32px;
+			font-size: 16px;
+			width:100%;
+		}
+	
+		.btn:hover{
+			background-colour:#9C3315;
+			color:white;}
+		
+		#item12{flex:50%;
+		background-color:#D05E44;}
+		
+		footer{
+			background-color:#421B0A;
+			padding:50px 0px
+		}
+	
+		@media (max-width: 800px) {
+			.flex-container{ flex-direction:column;}
+  }
+
+		
+	</style>
+</head>
+
+<body>
+	
+	<header>
+		<h1>The Page Heading</h1>
+	</header>
+	
+	<div class="flex-container">
+		<div id="item1">
+		<img src="images/person.jpg" alt="a person creeper">
+		
+		</div>
+		<div id="item2">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus dolore consectetur dolorem sequi repellat aspernatur, dolorum, impedit a, voluptatem exercitationem nisi maxime? Ipsum nam magni dolorem molestiae praesentium, dolorum obcaecati consectetur quos at similique unde commodi ea voluptate itaque minima cumque, asperiores necessitatibus quidem voluptates, harum incidunt aspernatur nemo eveniet?</p>
+		</div>
+		<div id="item3">
+		<p><button class="btn">Click Here!</button> </p>
+			<p><button class="btn">Click Me!</button></p>
+		</div>
+	</div> 
+	
+	
+	
+	<div class="flex-container">
+		<div id="item4">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, explicabo blanditiis doloremque molestiae tempora eos quia dicta debitis eaque nostrum atque! Ipsa cum ipsam quas impedit aliquam libero, saepe ullam! </p></div>
+		<div id="item5">
+		<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dolorum ad possimus sunt, dicta suscipit nemo omnis incidunt repudiandae, cumque, maxime aliquid, a accusamus maiores. </p>
+		</div>
+		<div id="item9">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est molestiae, ullam, omnis dignissimos esse consequuntur optio dolores, quisquam illo aperiam culpa, iure possimus a laborum! </div>
+		<div id="item10">
+		<img src="images/pexels-oleg-magni-3318620.jpg" alt="Spooky">
+		</div>
+		<div id="item11">
+		<p> <button class="btn">Click Here!</button> </p>
+			<p><button class="btn">Click Me!</button></p>
+		</div>
+		<div id="item12">
+		<ul>
+			<li>Boo</li>
+			<li> Eek!</li>
+			<li> Woof</li>
+			<li> Bark!</li>
+			</ul>
+		</div>
+	</div>
+	
+</body>
+</html>
+
+
+
+<footer>
+<div class="flex-container">
+		<div id="item6"></div>
+		<div id="item7">
+	<p>Created By: Noah Kot-Vox</p>
+			<p>&copy; 2021</p>
+	</div>
+		<div id="item8"></div>
+	</div> 
+</footer>
