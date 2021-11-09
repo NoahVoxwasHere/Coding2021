@@ -16,7 +16,7 @@
 h1{font-size:85px;
 text-align:center;
 color:#632121;
-text-shadow: 6px 6px #2A1714;
+text-shadow: 4px 4px #2A1714;
 }
 
 #head{
@@ -41,7 +41,8 @@ text-shadow: 6px 6px #2A1714;
 }
 
 body{
-		
+		padding:0;
+		margin:0;
 		background-image:linear-gradient(to right bottom, #b1726c, #bb776a, #c37d67, #ca8363, #d08a5f, #d49361, #d79d63, #daa666, #deb371, #e1c17e, #e5ce8b, #e9db9a);
 	}
 
