@@ -1,0 +1,125 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+
+
+
+
+
+
+
+
+
+
+h1{font-size:85px;
+text-align:center;
+color:#632121;
+text-shadow: 6px 6px #2A1714;
+}
+
+#head{
+	margin: 0;
+	/*space inside the div*/
+	padding: 25px;
+	
+	/*set an image of City Hall or a big street in Lethbridge, or the Old Man River bridge as background image*/
+	background-image:url(#);
+	/*set the background image to cover the whole div*/
+	background-size: cover;
+}
+
+.flex-container{
+			display: flex;
+		}
+
+.flex-container{
+			
+			margin:10px;
+			padding:10px;
+}
+
+body{
+		
+		background-image:linear-gradient(to right bottom, #b1726c, #bb776a, #c37d67, #ca8363, #d08a5f, #d49361, #d79d63, #daa666, #deb371, #e1c17e, #e5ce8b, #e9db9a);
+	}
+
+#item3{
+	padding: 20px;
+	text-align:center;
+	margin:1px 30px;
+	flex:50%;
+	background-color:#E75439;
+}
+
+#item4{
+	padding:20px;
+	text-align:center;
+	margin: 1px 30px ;
+	flex:50%;
+	background-color:#E75439;
+}
+
+#item2{
+	padding-top:10px;
+	padding:20px;
+	text-align:center;
+	margin:1px 30px;
+	flex:50%;
+	background-color:#E07A3D;
+}
+
+#item1{
+	padding:20px;
+	text-align: center;
+	margin:1px 30px;
+	flex:50%;
+	background-color:#E07A3D;
+}
+
+nav ul {
+
+  	list-style-type: none;
+	margin: auto;
+ 	padding: 0;
+ 	overflow: hidden;
+ 	background-color: #CC3E23;
+}
+
+nav li {
+  float:left;
+}
+
+nav li a:link, nav li a:visited {
+	/*Makes all links a block*/
+  display: block;
+  color: #F4EBD2;
+  text-align: center;
+  padding: 14px 30px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+nav li a:hover {
+  background-color: #9A3535;
+	color:#AAC57B;
+}
+
+
+nav{
+	
+	position: -webkit-sticky; /* Safari */
+  position:sticky;
+  top:0;
+}
+
+footer{background-color: #E79A46;
+padding:20px;
+text-align:center;}
+
+
+
+
+
+
