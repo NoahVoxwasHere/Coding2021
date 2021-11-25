@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Mad Lib</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300;400&display=swap" rel="stylesheet">
+<style>
+	
+	body{
+		background-image: linear-gradient(to top, #071a37, #0e2243, #162b4f, #1d345c, #253d69);
+		font-family: 'Gemunu Libre', sans-serif;
+		color: #DBE4F5;
+		font-size:20px;
+	}
+	
+	
+	
+</style>
+	
+	
+</head>
+
+<body>
+	
+	<header>Through the Woods</header>
+	
+	<h2>The story below is  MadLib! Interaction is key to allowing the story to function!</h2>
+	<h3>Please fill in the blanks in the story below, then "submit" at the finale!</h3>
+	
+	<form action="javascript:write();">
+	
+			<label for="col">Colour</label>
+			<input type="text" id="col" name="col">
+		
+		<br>
+		
+	<label for="tree">Choose a Type of Tree:</label>
+			<input type="radio" name="tree" value="birch" >Birch
+			<input type="radio" name="tree" value="pine" >Pine
+			<input type="radio" name="tree" value="ap" >Apricot
+		
+		<br>
+			<label for="shad">Shade</label>
+			<input type="text" id="shad" name="shad">
+		<br>
+			<label for="adj">Adjective</label>
+			<input type="text" id="adj" name="adj">
+		<br>
+			<label for="ing1">Sound ending with "ing"</label>
+			<input type="text" id="ing1" name="ing1">
+		<br>
+			<label for="noun">Noun</label>
+			<input type="text" id="noun" name="noun">
+		<br>
+			<label for="spree">Speed</label>
+			<input type="text" id="spree" name="spree">
+		<br>
+			<label for="adj2">Another Adjective</label>
+			<input type="text" id="adj2" name="adj2">
+		<br>
+			<label for="num">Number</label>
+			<input type="text" id="num" name="num">
+		<br>
+			<label for="pos">Positive Feeling</label>
+			<input type="text" id="pos" name="pos">
+		<br>
+			<label for="bug">Type of Bug</label>
+			<input type="text" id="bug" name="bug">
+		<br>
+			<label for="col2">Colour 2</label>
+			<input type="text" id="col2" name="col2">
+		<br>
+			<label for="col3">Colour 3</label>
+			<input type="text" id="col3" name="col3">
+		<br>
+			<label for="flow">Type of Flower</label>
+			<input type="text" id="flow" name="flow">
+		<br>
+			<label for="bone">Type of Bones</label>
+			<input type="text" id="bone" name="bone">
+		<br>
+			<label for="weap">Hand Held Weapon</label>
+			<input type="text" id="weap" name="weap">
+		<br>
+			<label for="ving">Verb ending with "ing"</label>
+			<input type="text" id="ving" name="ving">
+		<br>
+			<label for="prep">Preposition</label>
+			<input type="text" id="prep" name="prep">
+		<br>
+			<label for="colDark">Dark Colour</label>
+			<input type="text" id="colDark" name="colDark">
+		<br>
+			<label for="neg">Negative Feeling</label>
+			<input type="text" id="neg" name="neg">
+		<br>
+			<label for="siz">Size</label>
+			<input type="text" id="siz" name="siz">
+		
+		
+		
+		<p><input type="submit" value="Submit"></p>
+		
+	</form>
+	
+		<!--the button which will 'submit' the form to the 'form action', which is a call to our JavaScript function-->
+		
+	<div id="output">Story will be generated shortly...</div>
+	
+		<script>
+		function write(){
+			
+			var colour = document.getElementById('col').value;
+			var treeSel = document.querySelector('input[name="tree"]:checked').value;
+			var shade = document.getElementById('shad').value;
+			var adject = document.getElementById('adj').value;
+			var ingSel1 = document.getElementById('ing1').value;
+			var nou = document.getElementById('noun').value;
+			var speed = document.getElementById('spree').value;
+			var adject2 = document.getElementById('adj2').value;
+			var number = document.getElementById('num').value;
+			var posFeel = document.getElementById('pos').value;
+			var bugType = document.getElementById('bug').value;
+			var colour2 = document.getElementById('col2').value;
+			var colour3 = document.getElementById('col3').value;
+			var flower = document.getElementById('flow').value;
+			var bones = document.getElementById('bone').value;
+			var weapon = document.getElementById('weap').value;
+			var verb = document.getElementById('ving').value;
+			var prepos = document.getElementById('prep').value;
+			var colourDark = document.getElementById('colDark').value;
+			var negFeel = document.getElementById('neg').value;
+			var size = document.getElementById('siz').value;
+			
+			document.getElementById('output').innerHTML="<p>Awakening from his slumber, the man finally rises to see a forest of "+colour+" "+treeSel+" trees. The colour of these plants rising high into the "+shade+" sky. As he sits in the grass, looking to the sky with confusion, a "+ingSel1+" monster made of "+nou+" emerges from the bushes around the trees.</p><p>The man spikes upwards, running "+speed+" into the break of the forest. The snarling, "+adject2+" beast chasing after the man, its "+number+" legs scuttling against the ground like a "+bugType+". The man has no choice but to run, or fight.</p> <p>As the man runs deeper and deeper into the forest, he spots a cleaning with "+colour2+" light shining down from the sky. The man’s "+colour3+" eyes catch the light, a sense of "+posFeel+" taking hold of him. The man skids to a halt to climb towards the clearing, the hulking monster following behind him at a "+speed+" pace.</p> <p>As the man approaches the clearing filled with "+colour2+" "+flower+", in beds of "+bones+", and light, he spots a "+weapon+" shaped like a scissor laying in the bed of light shining down. The man dashes towards it, his hand clutching the bright "+colour+" handle. As his fingers wrap around the crooked hilt, he hears a somber voice press into his mind. </p> <p>“Who dares awaken me from my slumber in the void?”</p> <p>“Who dares to wield my power?”</p> <p>The beast from the forest lets out a mighty roar as it’s "+size+" body returns to the man's view. The man lifts the weapon up from the ground, hearing the scuttling legs of the "+adject+" creature approaching. He spins around, "+verb+" the weapon around with his eyes sewn shut.</p> <p>“You have made a wicked choice…”</p> <p>The man opens his eyes to be met face to face with the beast who has come to a complete stop. "+prepos+" its head, the weapons blade is lodged into the beasts cheek. The man breathes shakily as he watches a "+colourDark+" liquid emerge from the place his weapon has punctured.</p> <p>The beast drops to the ground in front the man, dead. His eyes look at the "+bugType+" looking creature that begins to evaporate into dust. The man breathes heavily as he falls to the ground in front the beast. He pants, putting a hand to his chest. </p> <p>“You have met with a terrible fate...May my bloodlust give you strength until the journey is over…”</p> <p>The man blinks once or twice before he starts to feel "+negFeel+". His vision goes "+shade+", and his body topples over. </p>";
+		
+			
+		}
+			
+		
+		</script>
+		
+</body>
+</html>
