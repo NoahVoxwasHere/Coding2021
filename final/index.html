@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>index.html</title>
+	
+	<style>
+	
+		#parent{
+			
+			width:750px;
+			height:450px;
+			background-color:#9D93F4;
+			margin: auto;
+			position:relative;
+			top:200px;
+			background-size:cover;
+			
+		}
+	
+	.child{
+			height:40px;
+			width:100px;
+			position:relative;
+			color:#F44A7F;
+		}
+		
+		#dayWeek{
+		left:50px;
+		top:230px;
+		
+		font-size:30px;
+		}
+		
+		#month{;
+		left:100px;
+		top:220px;
+	
+		font-size:50px;
+		}
+		
+		#dayMonth{
+		left:320px;
+		top:180px;
+		font-size:50px;
+		
+		}
+		
+		#year{;
+		font-size:90px;
+		left:400px;
+		top:220px;
+		
+		}
+		
+		#hours{
+		left:150px;
+		top:-60px;
+		
+		font-size:100px;
+		}
+		
+		#minutes{
+		left:280px;
+		top:-100px;
+		
+		font-size:100px;
+		}
+		
+		#seconds{
+		left:385px;
+		top:-77px;
+		
+		font-size:30px;
+		}
+		
+		#amp{
+		left:550px;
+		top:-190px;
+		
+		font-size:75px;
+		}
+		
+	</style>
+	
+</head>
+
+<body>
+	
+	<div id="parent"> 
+		<div id="dayWeek" class="child">DAY OF THE WEEK</div>
+		<div id="month" class="child">MONTH</div>
+		<div id="dayMonth" class="child">DAY OF MONTH</div>
+		<div id="year" class="child">YEAR</div>
+		<div id="hours" class="child">HOURS</div>
+		<div id="minutes" class="child">MINUTES</div>
+		<div id="seconds" class="child">SECONDS</div>
+		<div id="amp" class="child">AM PM</div>
+	</div>
+	
+	
+	<script>	
+			
+		
+		function time(){ 
+			var d=new Date();
+			
+			var hour=d.getHours();
+			var mins=d.getMinutes();
+			var secs=d.getSeconds();
+			var ye=d.getFullYear();
+				var months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+				var mon =d.getMonth();
+				var week = ["Sun","Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+			var mins=d.getMinutes();
+			var secs=d.getSeconds();
+			var ye=d.getFullYear();
+			var day=d.getDate();
+			
+			if (hour>12){
+				hour=hour-12;
+			}
+			
+			document.getElementById('hours').innerHTML=hour +":";
+			document.getElementById('minutes').innerHTML=mins;
+			document.getElementById('seconds').innerHTML=secs;
+			document.getElementById('year').innerHTML=ye;
+			document.getElementById('month').innerHTML=months[d.getMonth()];
+			document.getElementById('dayWeek').innerHTML=week[d.getDay()];
+			document.getElementById('dayMonth').innerHTML=day;
+			
+			if (hour<12){
+				document.getElementById('amp').innerHTML="AM"
+			}else{document.getElementById('amp').innerHTML="PM"}
+			
+			if (mins<10){
+				document.getElementById('minutes').innerHTML="0"+mins;
+			}
+			
+			if (secs<10){
+				document.getElementById('seconds').innerHTML="0"+secs;
+			}
+			
+			if (mon==0){document.getElementById('parent').style.backgroundImage="url('images/janu.jpg')";
+			}else if (mon==1){document.getElementById('parent').style.backgroundImage="url('images/feb.jpg')";
+			}else if (mon==2){document.getElementById('parent').style.backgroundImage="url('images/march.jpg')";
+			}else if(mon==3){document.getElementById('parent').style.backgroundImage="url('images/april.jpg')";
+			}else if(mon==4){document.getElementById('parent').style.backgroundImage="url('images/may.jpg')";
+			}else if(mon==5){document.getElementById('parent').style.backgroundImage="url('images/pride.jpg')";
+			}else if(mon==6){document.getElementById('parent').style.backgroundImage="url('images/july.jpg')";
+			}else if(mon==7){document.getElementById('parent').style.backgroundImage="url('images/august.jpg')";
+			}else if(mon==8){document.getElementById('parent').style.backgroundImage="url('images/sept.jpg')";
+			}else if(mon==9){document.getElementById('parent').style.backgroundImage="url('images/oct.jpg')";
+			}else if (mon==10){document.getElementById('parent').style.backgroundImage="url('images/nov.jpg')";
+			}else if(mon==11){document.getElementById('parent').style.backgroundImage="url('images/dec.jpg')";
+			}
+		
+		}
+		
+		time();
+		var myInt=setInterval(time, 1000);
+		
+	
+	</script>
+	
+</body>
+</html>
